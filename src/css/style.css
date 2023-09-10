@@ -1,0 +1,41 @@
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.title {
+	margin-top: 20px;
+	margin-bottom: 60px;
+	text-align: center;
+  color: teal;
+}
+
+.box {
+	margin: 0 auto;
+	padding: 0;
+	width: calc(64px * 4 + 46px);
+	height: calc(64px * 4 + 46px);;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	border: 2px solid teal;
+	border-radius: 4px;
+}
+
+.square {
+	width: 64px;
+	height: 64px;
+	margin: 4px;
+	border: 2px solid teal;
+	border-radius: 15px;
+}
+
+.img {
+  background: url('../img/goblin.png') center / cover no-repeat;
+}
+
+.info {
+	margin-top: 15px;
+	display: block;
+	text-align: center;
+}
