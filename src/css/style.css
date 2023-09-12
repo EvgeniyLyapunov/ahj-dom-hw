@@ -13,9 +13,10 @@
 .box {
 	margin: 0 auto;
 	padding: 0;
-	width: calc(64px * 4 + 46px);
-	height: calc(64px * 4 + 46px);;
+	width: calc(64px * 4 + 48px);
+	height: calc(64px * 4 + 48px);;
 	display: flex;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 	list-style: none;
 	border: 2px solid teal;

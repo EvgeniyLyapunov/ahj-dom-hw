@@ -5,20 +5,22 @@ export default class Widget {
   }
 
   boxShow() {
-    const squareList = this.box.querySelectorAll(".square");
+    const squareList = this.box.querySelectorAll('.square');
     const play = setInterval(() => {
-      const activeSquare =
-        squareList[Math.floor(Math.random() * squareList.length)];
-      activeSquare.classList.add("img");
-      setTimeout(() => {
-        activeSquare.classList.remove("img");
-      }, 500);
-    }, 600);
+      for (let square of squareList) {
+        if (square.classList.contains('img')) {
+          square.classList.remove('img');
+          break;
+        }
+      }
+      const activeSquare = squareList[Math.floor(Math.random() * squareList.length)];
+      activeSquare.classList.add('img');
+    }, 500);
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === " ") {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === ' ') {
         clearInterval(play);
-        document.querySelector("span").textContent = "Bye!";
+        document.querySelector('span').textContent = 'Bye!';
       }
     });
   }
